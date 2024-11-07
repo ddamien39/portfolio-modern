@@ -1,6 +1,11 @@
 @keyframes php-pop-progress-right {
     0% {
         border-width: 400px; /* total size */
+        opacity: 0%;
+    }
+
+    40%{
+        opacity: 100%;
     }
 
     100% {
@@ -11,6 +16,11 @@
 @keyframes html-pop-progress-right {
     0% {
         border-width: 400px; /* total size */
+        opacity: 0%;
+    }
+
+    40%{
+        opacity: 100%;
     }
 
     100% {
@@ -21,6 +31,11 @@
 @keyframes css-pop-progress-right {
     0% {
         border-width: 400px; /* total size */
+        opacity: 0%;
+    }
+
+    40%{
+        opacity: 100%;
     }
 
     100% {
@@ -28,10 +43,29 @@
     }
 }
 
+@keyframes info-combo-slide-left {
+    0% {
+        position:relative;
+        left:960px;
+        opacity: 0%;
+    }
+
+    30%{
+        opacity: 50%;
+    }
+
+    100% {
+        position:relative;
+        left: 0px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /* border: 1px solid red; */
 
     --pfp-size: 12.5em;
 }
@@ -46,12 +80,16 @@ body {
     background-color: #ffffff;
     width: 60vw;
     height: fit-content;
-    margin: auto;
+    margin: auto auto 55px auto;
     border-radius: 15px;
 
     padding: 0px 0px 50px 0px;
 
     flex-direction: column;
+
+    overflow:hidden;
+
+    box-shadow: 0PX 0PX 10PX #434a54;
 }
 
 .pfp-placeholder {
@@ -65,6 +103,7 @@ body {
 
     bottom: 0;
     transition: bottom ease-in-out .2s;
+    /* animation: info-combo-slide-left 1.75s; */
 }
 
 
@@ -90,6 +129,8 @@ body {
     justify-content: space-evenly;
 
     margin: 0px 0px 0px 60px;
+
+    animation: info-combo-slide-left 1.75s;
 }
 
 .inblue-button-dlcontact {
@@ -153,7 +194,8 @@ h2{
     background-color: #37bc9b;
 
     border-right: solid #e9ecef;
-    border-width: 251px; /* higher = less known */
+    border-width: 251px;
+
     margin-bottom: 25px;
 
     border-radius: 30px;
@@ -262,6 +304,8 @@ i {
     font-weight: 100;
     font-style: normal;
 
+    color:white;
+
     top: 0;
 
     transition: top ease .3s, background-color ease .3s;
@@ -307,5 +351,6 @@ i {
     bottom: 8.5px;
     position: relative;
 }
+
 
 
