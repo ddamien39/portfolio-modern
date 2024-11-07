@@ -1,3 +1,33 @@
+@keyframes php-pop-progress-right {
+    0% {
+        border-width: 400px; /* total size */
+    }
+
+    100% {
+        border-width: 251px; /* higher = less known */
+    }
+}
+
+@keyframes html-pop-progress-right {
+    0% {
+        border-width: 400px; /* total size */
+    }
+
+    100% {
+        border-width: 160px; /* higher = less known */
+    }
+}
+
+@keyframes css-pop-progress-right {
+    0% {
+        border-width: 400px; /* total size */
+    }
+
+    100% {
+        border-width: 175px; /* higher = less known */
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +46,7 @@ body {
     background-color: #ffffff;
     width: 60vw;
     height: fit-content;
-    margin: 100px auto;
+    margin: auto;
     border-radius: 15px;
 
     padding: 0px 0px 50px 0px;
@@ -31,6 +61,10 @@ body {
 
     border-radius: 1px;
     border: solid 7px white;
+    box-shadow: 1px 1px 5px black;
+
+    bottom: 0;
+    transition: bottom ease-in-out .2s;
 }
 
 
@@ -63,29 +97,6 @@ body {
     flex-direction: row;
 }
 
-.inblue-button-dlcontact button{
-    margin-right: 10px;
-    padding: 15px;
-    background-color: #37bc9b; /* set this individually */
-    border:none;
-    border-radius: 30px;
-    /* color: white; */
-
-    font-size: 1em;
-    box-shadow: 2px 2px 5px black;    
-
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.inblue-button-dlcontact #but1 {
-    color: black;
-    background-color: white;
-}
-
-
-.inblue-button-dlcontact #but2 {
-    color: white;
-}
 
 .aboutme {
     max-width: 45%;
@@ -111,6 +122,15 @@ h2{
     border-width: 3px;
 }
 
+.cv-part-last {
+    margin: 50px 70px 0px 70px;
+    padding-bottom: 60px;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 /* value */
 .personal-info b { 
     font-weight: normal;
@@ -133,10 +153,11 @@ h2{
     background-color: #37bc9b;
 
     border-right: solid #e9ecef;
-    border-width: 251px; /* hogher = less known */
+    border-width: 251px; /* higher = less known */
     margin-bottom: 25px;
 
     border-radius: 30px;
+    animation: php-pop-progress-right 1.85s;
 }
 
 .progress-html {
@@ -149,6 +170,7 @@ h2{
     margin-bottom: 25px;
 
     border-radius: 30px;
+    animation: html-pop-progress-right 1.85s;
 }
 
 .progress-css {
@@ -161,7 +183,7 @@ h2{
     margin-bottom: 25px;
 
     border-radius: 30px;
-
+    animation: css-pop-progress-right 1.85s;
 }
 
 .contact-container {
@@ -170,6 +192,9 @@ h2{
 }
 .contact-container input {
     width: 18.5em;
+    border: black solid;
+    border-width: 1px;
+    border-radius: 10px 0px 10px 0px;
 }
 
 .contact-form{
@@ -200,4 +225,87 @@ input[type="submit"]
     background-color: #4A89DC;
     border:none;
     border-radius: 5px;
+
+    transition: background-color ease-in-out .2s;
 }
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #325e96;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+i {
+    color: black;
+}
+
+#but2 {
+    background-color: black;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: #37bc9b; /* set this individually */
+    border:none;
+    border-radius: 30px;
+    /* color: white; */
+
+    font-size: 1em;
+    /* box-shadow: 2px 2px 5px black;     */
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+    top: 0;
+
+    transition: top ease .3s, background-color ease .3s;
+}
+
+#but2:hover {
+    position:relative;
+    top: -7px;
+    background-color: #329f84;
+    cursor:pointer;
+}
+ 
+
+#but1 {
+    background-color: black;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: white; /* set this individually */
+    border:none;
+    border-radius: 30px;
+    /* color: white; */
+
+    font-size: 1em;
+    /* box-shadow: 2px 2px 5px black;     */
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+    top: 0;
+
+    transition: top ease .3s, background-color ease .3s;
+}
+
+#but1:hover {
+    position:relative;
+    top: -7px;
+    background-color: rgb(214, 214, 214);
+    cursor:pointer;
+}
+
+.pfp-placeholder:hover {
+    bottom: 8.5px;
+    position: relative;
+}
+
+
