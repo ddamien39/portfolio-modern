@@ -1,37 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins;
-}
-
 body {
-    background-color: #636363;
+    background-color: #070F2B;
 }
 
-.success-msg {
+#title {
+    color: #0582ca;
+    font-family: Poppins, sans-serif;
+    text-align:center;
+}
+
+form {
     display:flex;
-    align-items:center;
-    flex-direction:column;
-    background-color: green;
-    max-width: 60%;
-    margin: 25px auto;
-    padding: 10px 15px;
-    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.error-msg {
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-    background-color: rgb(174, 0, 0);
-    max-width: 60%;
-    margin: 25px auto;
-    color:white;
-    padding: 10px 15px;
-    border-radius: 30px;
+input[type="text"], input[type="password"]
+{
+    width: 500px;
+    height: 40px;
+
+    font-size: large;
+
+    /* border:none; */
+    margin: 10px 0px 0px 0px;
+
+    /* border: 2.5px #ced4da solid; */
+
+    font-family: sans-serif;
 }
 
-i {
-    margin: 10px 0px;
+input[type="text"]:focus, input[type="password"]:focus
+{
+    /* border: .75px #00fff22d solid; */
+    box-shadow: 0px 0px 15px #01fff29f;
+    /* border-radius: 5px; */
+}
+
+input[type="submit"]
+{
+    margin: 10px 0px 0px 0px;
+    width: 75px;
+    height: 30px;
 }

@@ -22,13 +22,13 @@
             $MSG = $_POST["msg"];
         } else {
             ?>
-                <div class="error-msg">
-                    <script>changeWindowTitle("Erreur")</script>
-                    <i class="fa-solid fa-xmark fa-xl"></i>
-                    <h2>Erreur</h2>
+                <h1 id="title">Bienvenue</h1>
 
-                    <p>Il manque des informations.</p>
-                </div>
+                <form action="" method="get">
+                    <input type="text" name="username" id="password">
+                    <input type="password" name="password" id="password">
+                    <input type="submit" value="Envoyer">
+                </form>
             <?php
             exit(0);
         }

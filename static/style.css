@@ -60,6 +60,29 @@
     }
 }
 
+@keyframes pop-notification {
+    0%{
+        top: -57px;
+    }
+
+    /* 95% {
+        top: 13px;
+    } */
+
+    100% {
+        top: 15px
+    }
+}
+
+@keyframes disappear {
+    0%{
+        opacity:100%;
+    }
+    100%{
+        opacity:0%;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +90,7 @@
 
     /* border: 1px solid red; */
 
-    --pfp-size: 12.5em;
+    --pfp-size: 200px;
 }
 
 body {
@@ -352,5 +375,99 @@ i {
     position: relative;
 }
 
+.notification {
+    display:flex;
+    justify-content: center;
+    background-color: #329f84;
+    min-width: 37.5vw;
+    margin: auto;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    top: 15px;
+    border-radius: 30px;
+
+    padding: 10px;
+
+    color:#000;
+    font-family: sans-serif;
+
+    animation: pop-notification 1s;
+}
+
+.notification i {
+    margin-right: 5px;
+}
 
 
+
+
+@media screen and (max-width: 1160px) 
+{
+    .cv-part {
+        flex-direction: column;
+        margin: 20px 0px 0px 2em;
+    }
+
+    .main-container {
+        width: 95vw;
+    }
+
+    .info-combo {
+        margin: 0px;
+    }
+
+    .blue-cover {
+        min-height: 565px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme {
+        min-width: 90%;
+        margin-bottom: 35px;
+    }
+
+    .inblue-button-dlcontact button {
+        margin-bottom: 20px;
+        width: 150px;
+    }
+
+    .connaisances-container div {
+        max-width: 290px;
+    }
+
+    .inblue-name {
+        margin: 0px 0px 30px 0px;
+        text-align:center;
+    }
+
+    .pfp-placeholder{
+        position:relative;
+        left: 10px;
+        max-width: 175px;
+        max-height: 175px;
+        margin: 10px 0px;
+    }
+
+    .inblue-button-dlcontact {
+        flex-direction: column;
+    }
+
+    .personal-info p b {
+        display:block;
+    }
+
+    .nomprenom-container input {
+        margin-bottom: 30px;
+    }
+
+    .cv-part-last {
+        margin: 50px 70px 0px 40px;
+    }
+
+    .inblue-button-dlcontact {
+        justify-content: center;
+        align-items: center;
+    }
+}
