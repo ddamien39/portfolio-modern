@@ -83,6 +83,45 @@
     }
 }
 
+@media screen and (min-width: 0px) and (max-width: 796px) {
+    @keyframes info-combo-slide-left {
+        0% {
+            position:relative;
+            left:960px;
+            opacity: 0%;
+        }
+    
+        30%{
+            opacity: 50%;
+        }
+    
+        100% {
+            position:relative;
+            /* left: 62.5px; */
+        }
+    }
+}
+
+@media screen and (min-width: 796px) and (max-width: 1160px) {
+    @keyframes info-combo-slide-left {
+        0% {
+            position:relative;
+            left:960px;
+            opacity: 0%;
+        }
+    
+        30%{
+            opacity: 50%;
+        }
+    
+        100% {
+            position:relative;
+            left: 62.5px;
+        }
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -91,6 +130,10 @@
     /* border: 1px solid red; */
 
     --pfp-size: 200px;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -154,6 +197,9 @@ body {
     margin: 0px 0px 0px 60px;
 
     animation: info-combo-slide-left 1.75s;
+
+    position:relative;
+    top:20px;
 }
 
 .inblue-button-dlcontact {
@@ -401,7 +447,6 @@ i {
 
 
 
-
 @media screen and (max-width: 1160px) 
 {
     .cv-part {
@@ -410,7 +455,7 @@ i {
     }
 
     .main-container {
-        width: 95vw;
+        width: 90vw;
     }
 
     .info-combo {
@@ -418,8 +463,9 @@ i {
     }
 
     .blue-cover {
-        min-height: 565px;
-        flex-direction: column;
+        min-height: 275px;
+        padding-left:30px;
+        /* flex-direction: column; */
         align-items: center;
     }
 
@@ -430,7 +476,7 @@ i {
 
     .inblue-button-dlcontact button {
         margin-bottom: 20px;
-        width: 150px;
+        width: 175px;
     }
 
     .connaisances-container div {
@@ -445,9 +491,10 @@ i {
     .pfp-placeholder{
         position:relative;
         left: 10px;
-        max-width: 175px;
-        max-height: 175px;
+        max-width: 200px;
+        max-height: 200px;
         margin: 10px 0px;
+        right: 10px;
     }
 
     .inblue-button-dlcontact {
@@ -466,8 +513,113 @@ i {
         margin: 50px 70px 0px 40px;
     }
 
+    .info-combo {
+        position: relative;
+        left: 62.5px;
+    }
+
     .inblue-button-dlcontact {
         justify-content: center;
         align-items: center;
     }
+
+    .inblue-button-dlcontact {
+        display:inline;
+    }
+}
+
+@media screen and (max-width: 796px) 
+{
+    .cv-part {
+        flex-direction: column;
+        margin: 20px 0px 0px 2em;
+    }
+
+    .main-container {
+        width: 95vw;
+    }
+
+    .info-combo {
+        margin: 0px;
+    }
+
+    .blue-cover {
+        min-height: 450px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutme {
+        min-width: 90%;
+        margin-bottom: 35px;
+    }
+
+    .inblue-button-dlcontact button {
+        margin-bottom: 20px;
+        width: 175px;
+    }
+
+    .connaisances-container div {
+        max-width: 290px;
+    }
+
+    .inblue-name {
+        margin: 0px 0px 30px 0px;
+        text-align:center;
+    }
+
+    .pfp-placeholder{
+        position:relative;
+        left: 10px;
+        max-width: 200px;
+        max-height: 200px;
+        margin: 10px 0px;
+        right: 10px;
+    }
+
+    .inblue-button-dlcontact {
+        flex-direction: column;
+    }
+
+    .personal-info p b {
+        display:block;
+    }
+
+    .nomprenom-container input {
+        margin-bottom: 30px;
+    }
+
+    .cv-part-last {
+        margin: 50px 70px 0px 40px;
+    }
+
+    .info-combo {
+        position: relative;
+        left: 12.5px;
+    }
+
+    .inblue-button-dlcontact {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inblue-button-dlcontact {
+        display:inline;
+    }
+}
+
+footer {
+    text-align:center;
+    position:relative;
+    bottom:25px
+}
+
+
+#screamer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 9999;
+    display:none;
 }
