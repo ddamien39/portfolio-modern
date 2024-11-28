@@ -1,18 +1,3 @@
-<?php
-    if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["msg"]) && $_POST["msg"] != "" && $_POST["name"] != "" && $_POST["email"] != "") 
-    {
-        $NAME = $_POST["name"];
-        $EMAIL = $_POST["email"];
-        $MSG = $_POST["msg"];
-        $IS_SENT = true;
-    } else {
-        $IS_SENT = false;
-        $NAME = "";
-        $EMAIL = "";
-        $MSG = "";
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
